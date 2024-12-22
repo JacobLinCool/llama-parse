@@ -1,0 +1,52 @@
+{
+    "name": "llama-parse",
+    "version": "0.1.0",
+    "description": "zero dependency llama-parse client.",
+    "author": "JacobLinCool <jacoblincool@gmail.com> (https://github.com/JacobLinCool)",
+    "license": "MIT",
+    "homepage": "https://github.com/JacobLinCool/llama-parse",
+    "bugs": {
+        "url": "https://github.com/JacobLinCool/llama-parse/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/JacobLinCool/llama-parse.git"
+    },
+    "type": "module",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "test": "vitest",
+        "build": "tsup",
+        "changeset": "changeset",
+        "format": "prettier --write . --ignore-path .gitignore",
+        "gen-docs": "typedoc --out docs src"
+    },
+    "keywords": [
+        "llama-parse",
+        "llama",
+        "parse"
+    ],
+    "devDependencies": {
+        "@changesets/changelog-github": "^0.5.0",
+        "@changesets/cli": "^2.27.11",
+        "@types/node": "^22.10.2",
+        "dotenv": "^16.4.7",
+        "prettier": "^3.4.2",
+        "prettier-plugin-organize-imports": "^4.1.0",
+        "tsup": "^8.3.5",
+        "typedoc": "^0.27.5",
+        "typescript": "^5.7.2",
+        "vitest": "^2.1.8"
+    },
+    "packageManager": "pnpm@9.15.1"
+}
